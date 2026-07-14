@@ -694,12 +694,12 @@
     const ACTIVITIES = Object.freeze({
       rhythm: { title: '리듬악기캠프', category: '예', categoryClass: 'art', icon: '🥁', location: '본관 2층 3-2교실', teacher: '박소영' },
       digitalBus: { title: '디지털체험버스캠프', category: '예', categoryClass: 'art', icon: '🚌', location: '본관 1층 1-4교실 → 까치관 앞 디지털체험버스', teacher: '' },
-      reading: { title: '독서캠프', category: '문', categoryClass: 'lit', icon: '📚', location: '본관 1층 도서관', teacher: '안나영' },
+      reading: { title: '독서캠프', category: '문', categoryClass: 'lit', icon: '📚', location: '본관 1층 도서관', teacher: '안나영', extras: ['색연필', '사인펜'] },
       mathLow: { title: '수학캠프(저)', category: '문', categoryClass: 'lit', icon: '🔢', location: '본관 1층 1-1교실', teacher: '이혜주' },
       climbing: { title: '클라이밍캠프', category: '체', categoryClass: 'pe', icon: '🧗', location: '까치관', teacher: '손순옥', extras: ['운동하기 편한 복장', '운동화'] },
       traditional: { title: '전래놀이캠프', category: '체', categoryClass: 'pe', icon: '🪁', location: '본관 1층 1-2교실', teacher: '국남순', extras: ['운동하기 편한 복장', '운동화'] },
       recorder: { title: '리코더캠프', category: '예', categoryClass: 'art', icon: '🎶', location: '개나리관 3층 4-4교실', teacher: '도혜랑', extras: ['리코더 필수 준비!'] },
-      dodgeball: { title: '피구캠프', category: '체', categoryClass: 'pe', icon: '🏐', location: '까치관', teacher: '김지훈', extras: ['운동하기 편한 복장', '운동화'] },
+      dodgeball: { title: '피구캠프', category: '체', categoryClass: 'pe', icon: '🏐', location: '까치관', teacher: '김지훈', extras: ['편안한 운동복(청바지, 치마 안됨)', '운동화'] },
       mathMid: { title: '수학캠프(중)', category: '문', categoryClass: 'lit', icon: '🔢', location: '개나리관 2층 2-3교실', teacher: '장윤선' },
       aiDrawing: { title: 'AI 디지털드로잉 캠프', category: '예', categoryClass: 'art', icon: '🎨', location: '개나리관 1층 2-2교실', teacher: '김민영' },
       drone: { title: '드론캠프', category: '문', categoryClass: 'lit', icon: '🚁', iconImage: DRONE_ICON_DATA, location: '개나리관 2층 메이킹상상실', teacher: '최희준' },
@@ -886,7 +886,7 @@
     }
 
     function storageKey() {
-      return sessionUser ? `dreamhigh-prep-v2:${sessionUser.hash.slice(0, 24)}` : '';
+      return sessionUser ? `dreamhigh-prep-v3:${sessionUser.hash.slice(0, 24)}` : '';
     }
 
     function readChecklistState() {
