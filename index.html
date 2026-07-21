@@ -1004,7 +1004,7 @@
         return;
       }
       const hash = digestCredentials(number, name);
-      const teamKey = AUTH_MAP[hash] || (hash === 'fdf945f4a54346c7bbdd5367339fbf8f2d383cb9bb9affa4da8b94b52d21ff6e' ? 'highB' : undefined);
+      const teamKey = AUTH_MAP[hash] || (hash === 'fdf945f4a54346c7bbdd5367339fbf8f2d383cb9bb9affa4da8b94b52d21ff6e' ? 'highB' : hash === '89339070b7282374e721000f351b7c4c956a1feb2a410f85824200336cb186a4' ? 'lowC' : undefined);
       if (!teamKey) {
         failedAttempts += 1;
         els.message.textContent = '입력한 정보를 확인해 주세요. 번호와 이름이 모두 일치해야 합니다.';
