@@ -144,6 +144,14 @@
     }
     .login-card h2 { margin: 14px 0 6px; font-size: 1.35rem; letter-spacing: -.03em; }
     .login-card > p { margin: 0 0 19px; color: var(--muted); font-size: .92rem; }
+    .login-notice {
+      display: flex; align-items: flex-start; gap: 7px;
+      margin: -2px 0 18px; padding: 12px 14px;
+      border: 1px solid #f1dc91; border-radius: 14px;
+      background: #fff5d5; color: #715600;
+      font-size: .88rem; font-weight: 750; line-height: 1.55;
+    }
+    .login-notice strong { flex: 0 0 auto; color: #7b5700; }
     .field { margin-top: 14px; }
     .field label { display: block; margin: 0 0 7px; font-weight: 800; font-size: .92rem; }
     .field input {
@@ -512,6 +520,7 @@
         <div class="login-lock" aria-hidden="true">🔑</div>
         <h2 id="loginTitle">내 일정 확인하기</h2>
         <p>학생에게 안내된 4자리 고유번호와 이름을 정확히 입력해 주세요.</p>
+        <div class="login-notice" role="note"><strong>안내:</strong><span>실내화, 자유복장, 필기도구·개인 물병·물건을 담을 가방 준비</span></div>
 
         <div class="field">
           <label for="studentNumber">고유번호</label>
