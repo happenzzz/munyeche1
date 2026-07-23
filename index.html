@@ -520,7 +520,7 @@
         <div class="login-lock" aria-hidden="true">🔑</div>
         <h2 id="loginTitle">내 일정 확인하기</h2>
         <p>학생에게 안내된 4자리 고유번호와 이름을 정확히 입력해 주세요.</p>
-        <div class="login-notice" role="note"><strong>안내:</strong><span>실내화, 자유복장, 필기도구·개인 물병·물건을 담을 가방 준비</span></div>
+        <div class="login-notice" role="note"><strong>안내:</strong><span>실내화, 자유복장, 필기도구·개인 물병·물건을 담을 가방 준비, 활동지 분실하지 않고 챙기기!</span></div>
 
         <div class="field">
           <label for="studentNumber">고유번호</label>
@@ -1013,7 +1013,7 @@
         return;
       }
       const hash = digestCredentials(number, name);
-      const teamKey = AUTH_MAP[hash] || (hash === 'fdf945f4a54346c7bbdd5367339fbf8f2d383cb9bb9affa4da8b94b52d21ff6e' ? 'highB' : hash === '89339070b7282374e721000f351b7c4c956a1feb2a410f85824200336cb186a4' ? 'lowC' : undefined);
+      const teamKey = AUTH_MAP[hash] || (hash === 'fdf945f4a54346c7bbdd5367339fbf8f2d383cb9bb9affa4da8b94b52d21ff6e' ? 'highB' : hash === '89339070b7282374e721000f351b7c4c956a1feb2a410f85824200336cb186a4' ? 'lowC' : hash === '16fae9d6d9bd05f04f204092a516854a4df33423103f1e87e89204f1c737b270' ? 'lowB' : undefined);
       if (!teamKey) {
         failedAttempts += 1;
         els.message.textContent = '입력한 정보를 확인해 주세요. 번호와 이름이 모두 일치해야 합니다.';
